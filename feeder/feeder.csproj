@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDF2CB02-AC79-41C6-8B15-4BB7209F8A00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>feeder</RootNamespace>
+    <AssemblyName>feeder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil_Admin.Designer.cs">
+      <DependentUpon>Accueil_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterTechnicien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterTechnicien.Designer.cs">
+      <DependentUpon>AjouterTechnicien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentification.Designer.cs">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buse1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buse1.Designer.cs">
+      <DependentUpon>Buse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buse2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buse2.Designer.cs">
+      <DependentUpon>Buse2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changer_MDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changer_MDP.Designer.cs">
+      <DependentUpon>Changer_MDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GestionAdminDAO.cs" />
+    <Compile Include="DAL\GestionConfigurationDAO.cs" />
+    <Compile Include="DAL\GestionEtatDAO.cs" />
+    <Compile Include="DAL\GestionTechnicienDAO.cs" />
+    <Compile Include="DAL\IGestionAdminDAO.cs" />
+    <Compile Include="DAL\IGestionConfigurationDAO.cs" />
+    <Compile Include="DAL\IGestionEtatDAO.cs" />
+    <Compile Include="DAL\IGestionProduitDAO.cs" />
+    <Compile Include="DAL\GestionProduitDAO.cs" />
+    <Compile Include="DAL\IGestionTechnicienDAO.cs" />
+    <Compile Include="Etat_Buse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_Buse.Designer.cs">
+      <DependentUpon>Etat_Buse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat_Feeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_Feeder.Designer.cs">
+      <DependentUpon>Etat_Feeder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feeder1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feeder1.Designer.cs">
+      <DependentUpon>Feeder1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feeder2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feeder2.Designer.cs">
+      <DependentUpon>Feeder2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil_Technicien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil_Technicien.Designer.cs">
+      <DependentUpon>Accueil_Technicien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feeder_Prevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feeder_Prevision.Designer.cs">
+      <DependentUpon>Feeder_Prevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDeProjetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionDeProjetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hello.Designer.cs">
+      <DependentUpon>hello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajProdBuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajProdBuse.Designer.cs">
+      <DependentUpon>MajProdBuse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajProdFeeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajProdFeeder.Designer.cs">
+      <DependentUpon>MajProdFeeder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="metier\GestionEtat.cs" />
+    <Compile Include="metier\IGestionEtat.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Buse.cs" />
+    <Compile Include="Models\Etat.cs" />
+    <Compile Include="Models\Feeder.cs" />
+    <Compile Include="Models\Personne.cs" />
+    <Compile Include="Models\Produit.cs" />
+    <Compile Include="Models\Technicien.cs" />
+    <Compile Include="ModifConfMaxBuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifConfMaxBuse.Designer.cs">
+      <DependentUpon>ModifConfMaxBuse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifConfMAxFeeder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifConfMAxFeeder.Designer.cs">
+      <DependentUpon>ModifConfMAxFeeder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prevision.Designer.cs">
+      <DependentUpon>Prevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prevision2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prevision2.Designer.cs">
+      <DependentUpon>Prevision2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Buse_Prevision_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buse_Prevision_.Designer.cs">
+      <DependentUpon>Buse_Prevision_.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil_Admin.resx">
+      <DependentUpon>Accueil_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjouterTechnicien.resx">
+      <DependentUpon>AjouterTechnicien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentification.resx">
+      <DependentUpon>Authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buse1.resx">
+      <DependentUpon>Buse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buse2.resx">
+      <DependentUpon>Buse2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changer_MDP.resx">
+      <DependentUpon>Changer_MDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat_Buse.resx">
+      <DependentUpon>Etat_Buse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat_Feeder.resx">
+      <DependentUpon>Etat_Feeder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feeder1.resx">
+      <DependentUpon>Feeder1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feeder2.resx">
+      <DependentUpon>Feeder2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accueil_Technicien.resx">
+      <DependentUpon>Accueil_Technicien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feeder_Prevision.resx">
+      <DependentUpon>Feeder_Prevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hello.resx">
+      <DependentUpon>hello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajProdBuse.resx">
+      <DependentUpon>MajProdBuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajProdFeeder.resx">
+      <DependentUpon>MajProdFeeder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifConfMaxBuse.resx">
+      <DependentUpon>ModifConfMaxBuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifConfMAxFeeder.resx">
+      <DependentUpon>ModifConfMAxFeeder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prevision.resx">
+      <DependentUpon>Prevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prevision2.resx">
+      <DependentUpon>Prevision2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Buse_Prevision_.resx">
+      <DependentUpon>Buse_Prevision_.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GestionDeProjetDataSet.xsc">
+      <DependentUpon>GestionDeProjetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionDeProjetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionDeProjetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionDeProjetDataSet.xss">
+      <DependentUpon>GestionDeProjetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
